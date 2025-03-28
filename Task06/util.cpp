@@ -28,6 +28,7 @@ void print_test(int* array, int size, int* expected, int start, int end, bool ty
 	SetConsoleTextAttribute(h, (0 | 15));
 	
 	if (!result && size > 0) {
+		cout << "Base array: " << convert(array, size) << endl;
 		cout << "Current array: " << convert(array, size) << endl;
 		cout << "Expected array: " << convert(expected, size) << endl;
 		cout << "Option: sort by " << (type ? "ascending" : "descending")
