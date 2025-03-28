@@ -8,5 +8,16 @@
 #include "logic.h"
 
 int count_local_max(int* array, int size) {
-	return 0;
+	int count = 0;
+
+	if (size < 2)
+		return 0;
+	
+	for (int i = 0; i < size; i++)
+	{
+		if (array[i] > array[i - 1] && array[i] > array[i + 1]) {
+			count++;
+		}
+	}
+	return count;
 }
