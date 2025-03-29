@@ -9,8 +9,8 @@
 #include "logic.h"
 
 void sort_asc(int* array, int size, int start, int end) {
-	
-for (int i = start; i < end; i++)
+
+	for (int i = start; i < end; i++)
 	{
 		for (int j = start; j < end; j++)
 		{
@@ -26,7 +26,7 @@ for (int i = start; i < end; i++)
 }
 
 void sort_dsc(int* array, int size, int start, int end) {
-	
+
 	for (int i = start; i < end; i++)
 	{
 		for (int j = start; j < end; j++)
@@ -36,7 +36,7 @@ void sort_dsc(int* array, int size, int start, int end) {
 				array[j] = array[j + 1];
 				array[j + 1] = t;
 			}
-			
+
 		}
 	}
 }
@@ -57,3 +57,23 @@ void sort_in_range(int* array, int size, int start, int end, bool type) {
 		}
 	}
 }
+
+//void sort_in_range(int* array, int size, int start, int end, bool type) {
+//	for (int i = 0; i < size - 1; i++)
+//	{
+//		bool flag = true;
+//		for (int j = 0; j < size - 1 - i; j++)
+//		{
+//			bool condition = type ? array[i] > array[i + 1]
+//				: array[i] < array[i + 1];
+//			if (condition) {
+//				int t = array[j];
+//				array[j] = array[j + 1];
+//				array[j + 1] = t;
+//				flag = false;
+//			}
+//		}
+//		if (flag)
+//			break;
+//	}
+//}
